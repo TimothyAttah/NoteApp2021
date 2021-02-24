@@ -2,7 +2,6 @@ import React from 'react';
 import { Icon, Dropdown} from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-import { logout } from '../../redux/actions/userAction'
 import history from '../../history'
 
 const renderLogout = () => {

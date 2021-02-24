@@ -1,10 +1,8 @@
 import React, {useState} from 'react'
 import { Dropdown, Icon, Button, Modal } from 'semantic-ui-react'
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux'
 import styled from 'styled-components';
 
-import { deleteNotes } from '../../redux/actions/noteActions'
 import history from '../../history'
 
 const ModalWrapper = styled.div`
@@ -30,10 +28,9 @@ const ButtonWrapper = styled.div`
 
 const NotePortal = ( { note } ) => {
   const [ open, setOpen ] = useState( false )
-  const dispatch = useDispatch()
   
   const renderDelete = () => {
-    dispatch( deleteNotes( note.id ) )
+   
     history.push('/notes')
   }
   return (

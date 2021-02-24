@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { Form, Button, } from 'semantic-ui-react';
-import { useDispatch } from 'react-redux'
 
 import { signIn } from '../../redux/actions/userAction'
 import history from '../../history'
@@ -10,15 +9,14 @@ const SignInForm = () => {
   const [email, setEmail] = useState('')
   const [ password, setPassword ] = useState( '' )
  
-  const dispatch = useDispatch()
-    
+   
     const  renderSubmit = (e) => {
       e.preventDefault()
       const savedUser = {
         email,
         password
       } 
-      dispatch( signIn( savedUser ) )
+      
       history.push('/notes')
       }
   return (
