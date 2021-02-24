@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import { Form, Button } from 'semantic-ui-react';
-import {useDispatch} from 'react-redux'
 
 import {signUp} from '../../redux/actions/userAction'
 
@@ -10,8 +9,7 @@ const SignUpForm = () => {
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
   const [ password, setPassword ] = useState( '' )
-  const dispatch = useDispatch()
-    
+   
     const  renderSubmit = (e) => {
       e.preventDefault()
       const savedUser = {
@@ -21,7 +19,7 @@ const SignUpForm = () => {
         password
       }
        console.log(savedUser)
-       dispatch(signUp(savedUser))
+     
       }
   return (
     <div>

@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 import { Form, Button, TextArea} from 'semantic-ui-react'
-import { useDispatch } from 'react-redux'
 
-import { createNote } from '../../redux/actions/noteActions'
 import history from '../../history'
 
 
@@ -11,8 +9,7 @@ import history from '../../history'
 const CreateNoteForm = () => {
   const [title, setTitle] = useState('')
   const [content, setContent] = useState('')
-  const dispatch = useDispatch()
-
+  
   
   const handleSubmit = ( e ) => {
     e.preventDefault()
@@ -20,7 +17,7 @@ const CreateNoteForm = () => {
       title,
       content
     }
-     dispatch( createNote( newNote ) )
+    
      history.push('/notes')
   }
   return (

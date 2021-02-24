@@ -67,7 +67,7 @@ export const PTag = styled.p`
 `
 
 export const GoogleBox = styled.div`
-  background-color: ${colors.red};
+  background-color: ${colors.teal};
   box-shadow: 1px 0px 1px 1px rgba(2,0,0, 0.1) inset;
   border-radius: 6px;
   margin: 20px 0;
@@ -88,9 +88,9 @@ export const Wrapper = styled.div`
   font-size: 16px;
   letter-spacing: 1px;
   span{
-    color: ${colors.red};
+    color: ${colors.teal};
     background-color: ${colors.white};
-    border: 1px solid ${colors.red};
+    border: 1px solid ${colors.teal};
     height: 40px;
     width: 50px;
     display: flex;
